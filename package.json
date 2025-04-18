@@ -29,6 +29,9 @@
     "express-async-handler": "^1.2.0",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
-    "yamljs": "^0.3.0"
+    "yamljs": "^0.3.0",
+    "netlify-cli": "^17.17.1",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0"
   }
 }
