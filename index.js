@@ -21,3 +21,5 @@ swaggerDocs(app, PORT);
 app.listen(PORT, () => {
   console.log("APP listens on ", PORT);
 });
+
+module.exports = app;
