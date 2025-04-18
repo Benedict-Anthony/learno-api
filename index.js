@@ -4,11 +4,13 @@ const userRouter = require("./routes/user.routes");
 const postRouter = require("./routes/post.routes");
 const swaggerDocs = require("./swagger.js");
 const app = require("./app.js");
+const cors = require("cors");
 config();
 
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Let do this" });

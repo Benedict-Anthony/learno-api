@@ -78,7 +78,7 @@ components:
         - content
 
 paths:
-  /users/register:
+  /auth/register:
     post:
       tags:
         - Users
@@ -95,7 +95,7 @@ paths:
         400:
           description: Validation error
 
-  /users/login:
+  /user/login:
     post:
       tags:
         - Users
