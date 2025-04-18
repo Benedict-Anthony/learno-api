@@ -17,7 +17,7 @@ const options = {
         description: "Local server",
       },
       {
-        url: "<your live url here>",
+        url: "https://learno-api-j7x6.onrender.com/",
         description: "Live server",
       },
     ],
