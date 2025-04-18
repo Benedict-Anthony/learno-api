@@ -7,8 +7,8 @@ const postRouter = require("./routes/post.routes");
 
 app.use(express.json());
 
-app.use("/api/users", userRouter);
-app.use("/api/posts", postRouter);
+app.use("/api/auth/", userRouter);
+app.use("/api/posts/", postRouter);
 
 // any other middleware, error handlers, etc.
 

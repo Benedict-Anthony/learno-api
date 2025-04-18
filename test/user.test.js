@@ -1,11 +1,18 @@
 const request = require("supertest");
 const app = require("../app");
+const { PrismaClient } = require("../generated/prisma");
 // const app = require("../index"); // update to match your Express app export
+const prisma = new PrismaClient();
+jest.setTimeout(25000);
 
+beforeAll(async () => {
+  // Clean up test user if exists
+  await prisma.user.deleteMany({ where: { email: "test@example.com" } });
+});
 describe("User Routes", () => {
   it("should register a new user", async () => {
     const res = await request(app).post("/api/auth/register").send({
-      email: "test01@example.com",
+      email: "test@example.com",
       name: "Test User",
       password: "password123",
     });
