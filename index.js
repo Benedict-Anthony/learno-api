@@ -3,8 +3,8 @@ const config = require("dotenv").config;
 const userRouter = require("./routes/user.routes");
 const postRouter = require("./routes/post.routes");
 const swaggerDocs = require("./swagger.js");
+const app = require("./app.js");
 config();
-const app = express();
 
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
@@ -17,9 +17,7 @@ app.get("/", (req, res) => {
 app.use("/api/auth/", userRouter);
 app.use("/api/posts/", postRouter);
 
-swaggerDocs(app, PORT);
 app.listen(PORT, () => {
   console.log("APP listens on ", PORT);
+  swaggerDocs(app, PORT);
 });
-
-module.exports = app;

@@ -1,10 +1,11 @@
 const request = require("supertest");
-const app = require("../index"); // update to match your Express app export
+const app = require("../app");
+// const app = require("../index"); // update to match your Express app export
 
 describe("User Routes", () => {
   it("should register a new user", async () => {
     const res = await request(app).post("/api/auth/register").send({
-      email: "test@example.com",
+      email: "test01@example.com",
       name: "Test User",
       password: "password123",
     });
