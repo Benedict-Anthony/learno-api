@@ -5,7 +5,7 @@ info:
   description: API for user authentication and post management
 
 servers:
-  - url: http://localhost:5000/api
+  - url: https://learno-api-j7x6.onrender.com/
 
 components:
   securitySchemes:
