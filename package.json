@@ -5,6 +5,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "echo \"✅ Skipping tests for now because env and secret fils\"",
+    "postinstall": "prisma generate",
     "dev": "nodemon index.js",
     "start": "node index.js"
   },
